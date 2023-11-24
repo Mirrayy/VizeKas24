@@ -26,3 +26,8 @@ test_that("spotify_search_artist()  listenin iki elementi olmalı.", {
   result <- spotify_search_artist("Random Artist")
   expect_length(result, 2)
 })
+# Test 2.5
+test_that("spotify_search_artist()  listenin ilk elementinin ismi status_code olmal.", {
+  result <- spotify_search_artist("Random Artist")
+  expect_named(result, c("status_code", "search_results"))
+})
