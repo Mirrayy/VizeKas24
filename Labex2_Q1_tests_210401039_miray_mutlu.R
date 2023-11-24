@@ -44,7 +44,7 @@ testthat::test_that("spotify_token()  listenin ikinci elementinin ismi token olm
   result <- spotify_token()
   expect_true("token" %in% names(result))
   
-  
+})
   
   #Test 1.9)
   testthat::test_that("spotify_token()  listenin ikinci elementinin class'ı character olmalı", {
@@ -56,5 +56,12 @@ testthat::test_that("spotify_token()  listenin ikinci elementinin ismi token olm
   testthat::test_that("spotify_token()  listenin ikinci elementi 'Bearer ' ile başlamalı", {
     result <- spotify_token()
     expect_true(startsWith(result$token, "Bearer "))
+    
+    
+    
   })
-})
+  #Test 1.11) 
+  testthat::test_that("spotify_token()  listenin ikinci elementi character değişkeninin içinde 122 adet harf bulunmal", {
+    result <- spotify_token()
+    expect_length(strsplit(result$token, "")[[1]], 122)
+  })
