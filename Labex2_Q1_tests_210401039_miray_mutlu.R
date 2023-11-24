@@ -32,3 +32,10 @@ testthat::test_that("spotify_token() listenin ilk elementinin class'ı numeric o
   result <- spotify_token()
   expect_true(is.numeric(result$status_code))
 })
+
+
+#Test 1.7)
+testthat::test_that("spotify_token()  listenin status_code adlı elementinin değeri 200'e eşit olmalı", {
+  result <- spotify_token()
+  expect_equal(result$status_code, 200)
+})
