@@ -51,4 +51,10 @@ testthat::test_that("spotify_token()  listenin ikinci elementinin ismi token olm
     result <- spotify_token()
     expect_true(is.character(result$token))
   })
+  
+  #Test 1.10)
+  testthat::test_that("spotify_token()  listenin ikinci elementi 'Bearer ' ile başlamalı", {
+    result <- spotify_token()
+    expect_true(startsWith(result$token, "Bearer "))
+  })
 })

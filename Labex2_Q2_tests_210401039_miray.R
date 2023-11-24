@@ -54,5 +54,13 @@ test_that("spotify_search_artist()  listenin ilk elementinin class numeric olmal
     result <- spotify_search_artist("Random Artist")
     expect_is(result$search_results, "data.frame")
   }
+  
+  
+  # Test 2.10
+  test_that("spotify_search_artist()  listenin ikinci elementinin iki sütunu", {
+    result <- spotify_search_artist("Random Artist")
+    expect_length(names(result$search_results), 2)
+  })
+  
   )
 })
