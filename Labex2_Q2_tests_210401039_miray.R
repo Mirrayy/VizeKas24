@@ -21,3 +21,8 @@ test_that("spotify_search_artist() herhangi bir artist ismi ile bir liste olmal�
   expect_is(result, "list")
 })
 
+# Test 2.4: spotify_search_artist()  listenin iki elementi olmalı
+test_that("spotify_search_artist()  listenin iki elementi olmalı.", {
+  result <- spotify_search_artist("Random Artist")
+  expect_length(result, 2)
+})

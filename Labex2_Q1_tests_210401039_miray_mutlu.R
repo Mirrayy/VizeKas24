@@ -10,7 +10,13 @@ testthat::test_that("spotify_token adl değişkenin tipi 'function' olmalı", {
 })
 
 #Test 1.3)
-testthat::test_that("spotify_token() ??a??r??ld??????nda d??nd??rd?????? ????kt?? bir liste olmal??", {
+testthat::test_that("spotify_token()  bir liste olmal??", {
   result <- spotify_token()
   expect_true(is.list(result))
+})
+
+#Test 1.4)
+testthat::test_that("spotify_token()  listenin iki elementi olmalı", {
+  result <- spotify_token()
+  expect_length(result, 2)
 })
