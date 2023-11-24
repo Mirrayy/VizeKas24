@@ -39,3 +39,8 @@ testthat::test_that("spotify_token()  listenin status_code adlı elementinin de�
   result <- spotify_token()
   expect_equal(result$status_code, 200)
 })
+#Test 1.8)
+testthat::test_that("spotify_token()  listenin ikinci elementinin ismi token olmalı", {
+  result <- spotify_token()
+  expect_true("token" %in% names(result))
+})

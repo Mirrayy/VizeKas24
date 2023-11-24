@@ -42,4 +42,11 @@ test_that("spotify_search_artist()  listenin ilk elementinin class numeric olmal
     result <- spotify_search_artist("Random Artist")
     expect_equal(result$status_code, 200)
   })
+  
+  # Test 2.8
+  test_that("spotify_search_artist()  listenin ikinci elementinin ismi search_results olmalı", {
+    result <- spotify_search_artist("The Doors")
+    expect_named(result, c("status_code", "search_results"))
+  })
+  
 })
