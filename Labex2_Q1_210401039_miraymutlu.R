@@ -5,8 +5,6 @@ install.packages("httr")
 library(httr)
 
 # SPOTIFY_ID ve SPOTIFY_SECRET environment ayarlamak
-Sys.setenv(SPOTIFY_ID = "fda3d042c7314aafb35219332ac45d89")
-Sys.setenv(SPOTIFY_SECRET = "8da88c6359d74d0493d082db3eafe45a")
 
 # Ard??ndan, fonksiyonu
 library(httr)
