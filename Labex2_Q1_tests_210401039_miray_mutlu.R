@@ -26,3 +26,9 @@ testthat::test_that("spotify_token()  listenin ilk elementinin ismi status_code 
   result <- spotify_token()
   expect_true("status_code" %in% names(result))
 })
+
+#Test 1.6)
+testthat::test_that("spotify_token() listenin ilk elementinin class'ı numeric olmalı", {
+  result <- spotify_token()
+  expect_true(is.numeric(result$status_code))
+})
