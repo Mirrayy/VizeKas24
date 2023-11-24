@@ -67,4 +67,9 @@ test_that("spotify_search_artist()  listenin ilk elementinin class numeric olmal
     result <- spotify_search_artist("Random Artist")
     expect_equal(names(result$search_results), c("artist", "id"))
   })
+  # Test 2.11
+  test_that("spotify_search_artist('The Doors')  listenin ikinci elementinin birinci sat??r??n??n 'id' adl sütunu '22WZ7M8sxp5THdruNY3gXt' olmal", {
+    result <- spotify_search_artist("The Doors")
+    expect_equal(result$search_results[1, "id"], "22WZ7M8sxp5THdruNY3gXt")
+  })
 })
